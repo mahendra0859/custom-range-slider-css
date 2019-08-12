@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mood Slider Javascript | Custom Range Slider CSS | HTML CSS and Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <i class="material-icons" id="emoji">
+            sentiment_satisfied
+        </i>
+        <input type="range" name="range" id="slider" min="0" max="4" value="2">
+    </div>
+    <script>
+        var slider = document.getElementById('slider'),
+            emoji = document.getElementById('emoji'),
+            emoticons = ["mood_bad", "sentiment_very_dissatisfied", "sentiment_satisfied", "sentiment_satisfied_alt", "sentiment_very_satisfied"];
+        slider.oninput = function () {
+            emoji.innerHTML = emoticons[slider.value]
+        }
+
+    </script>
+
+</body>
+
+</html>
